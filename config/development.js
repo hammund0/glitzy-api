@@ -4,8 +4,8 @@ export default {
     app: {
         host: '0.0.0.0',
         port: 8000,
-        jwtKey: process.env.JWT_KEY,
-        defaultCurrency: 'EUR'
+        jwtKey: 'dSDrrGX50oefsugOqBYmdq9pDk4KGlJGnhaoqRv5Y78=',
+        defaultCurrency: 'GBP'
     },
     database: {
         servers: [
@@ -33,19 +33,23 @@ export default {
     emails: {
         from: {
             name: 'Nicistore.com',
-            email: 'vendas@nicistore.com'
+            email: '247hammond@live.com'
         }
     },
     storefront: {
-        label: 'nicistore.com',
+        label: 'http://localhost:3000',
         baseUrl: 'http://localhost:3000',
-        defaultLocale: 'pt'
+        defaultLocale: 'en'
     },
     switchPayments: {
-        enabled: true,
+        enabled: false,
         baseUrl: 'https://api-test.switchpayments.com/v2',
         accountId: process.env.SWITCH_ACCOUNT_ID,
         privateKey: process.env.SWITCH_PRIVATE_KEY
+    },
+    stripePayments: {
+      enabled: true,
+      privateKey: 'sk_test_mlIStAxfzT8EmHq4pXuSAqiW'// env var
     },
     mailgun: {
         domain: process.env.MAILGUN_DOMAIN,

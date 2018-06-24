@@ -3,6 +3,7 @@ import config from './config';
 
 import accountRoutes from './resources/account/routes';
 import cartRoutes from './resources/carts/routes';
+import chargeRoutes from './resources/charge/routes';
 import checkoutRoutes from './resources/checkouts/routes';
 import collectionRoutes from './resources/collections/routes';
 import contentRoutes from './resources/contents/routes';
@@ -16,6 +17,7 @@ const routePrefix = config.app.routePrefix || '';
 export default buildRoutes({
     [`${routePrefix}/v1/account`]: accountRoutes,
     [`${routePrefix}/v1/carts`]: cartRoutes,
+    [`${routePrefix}/v1/charge`]: chargeRoutes,
     [`${routePrefix}/v1/checkouts`]: checkoutRoutes,
     [`${routePrefix}/v1/collections`]: collectionRoutes,
     [`${routePrefix}/v1/contents`]: contentRoutes,

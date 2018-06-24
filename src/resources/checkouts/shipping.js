@@ -10,27 +10,25 @@ function getShippingOptions(checkout) {
 
     let options = [];
 
-    if (new Checkout(checkout).getSubTotal() <= 19.90) {
+    if (new Checkout(checkout).getSubTotal() <= 40) {
         options.push({
             value: 'standard',
             name: {
-                en: 'CTT Expresso, 2 to 3 workdays after shipping',
-                pt: 'CTT Expresso, 2 a 3 dias úteis após envio'
+                en: 'Standard shipping. Up to 5 days.'
             },
-            price: 3.40,
-            vat: 23,
-            currency: 'EUR'
+            price: 3.50,
+            vat: 20,
+            currency: 'GBP'
         });
     } else {
         options.push({
             value: 'free',
             name: {
-                en: 'Free! CTT Expresso, 2 to 3 workdays after shipping',
-                pt: 'Grátis! CTT Expresso, 2 a 3 dias úteis após envio'
+                en: 'Standard shipping. Up to 5 days.'
             },
             price: 0,
-            vat: 23,
-            currency: 'EUR'
+            vat: 20,
+            currency: 'GBP'
         });
     }
 
